@@ -26,9 +26,17 @@ namespace ConsoleUI // Note: actual namespace depends on the project name.
         private static void ProductTest()
         {
             ProductManager productManager = new ProductManager(new EfProductDal());//solid => open closed principle
-            foreach (var product in productManager.GetProductDetails())
+            var result = productManager.GetProductDetails();
+            if (result.Success == true)
             {
-                Console.WriteLine(product.ProductName + "/" + product.CategoryName);
+                foreach (var product in result.Data)
+                {
+                    Console.WriteLine(product.ProductName + "/" + product.CategoryName);
+                }
+            }
+            else
+            {
+                Console.WriteLine(result.Message);
             }
         }
     }
