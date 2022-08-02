@@ -15,5 +15,11 @@ namespace Business.Constants
         public static string MaintenanceTime = "Sistem bakım saatleri içerisindedir.";
 
         public static string ProductsListed = "Ürünler Listelendi";
+
+        public static string ProductCountOfCategory = "Bir kategoride en fazla 10 ürün olabilir.";
+
+        public static string ProductNameAlreadyExist = "Bu isimde bir ürün hali hazırda mevcuttur.";
+
+        public static string CotegoryLimitExceeded = "Kategori limiti aşıldığı için yeni bir ürün eklenemiyor.";
     }
 }
