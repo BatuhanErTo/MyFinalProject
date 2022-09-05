@@ -83,7 +83,7 @@ namespace Business.Concrete
         {
             return new SuccessDataResult<List<ProductDetailDto>>(_productDal.GetProductDetails());
         }
-
+        
         private IResult CheckIfProductCountOfCategoryCorrect(int categoryId)
         {
             var result = _productDal.GetAll(p => p.CategoryId == categoryId).Count;
@@ -129,6 +129,7 @@ namespace Business.Concrete
             return null;
         }
 
+        
     }
 }
 
